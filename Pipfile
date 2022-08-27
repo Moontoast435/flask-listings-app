@@ -19,4 +19,4 @@ python_version = "3.10"
 [scripts]
 init_db = "python init_db.py"
 dev = "flask run -p ${PORT}"
-start = "waitress-serve --host 127.0.0.1 listings:app"
+start = "waitress-serve --port=$PORT --call 'listings:app'"
